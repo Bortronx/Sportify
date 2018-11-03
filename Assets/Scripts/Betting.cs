@@ -34,11 +34,6 @@ public class Betting : MonoBehaviour {
         //Output this to console when the Button3 is clicked
         Debug.Log("Button clicked = " + buttonNo);
     }
-
-    // Use this for initialization
-    void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
