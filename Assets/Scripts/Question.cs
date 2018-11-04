@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Question {
+public class Question
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public string PlayerParam;
+    public string TeamParam;
+
+    public Question(Sport sport, GameEvent game)
+    {
+
+    }
+
 }
