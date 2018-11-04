@@ -22,14 +22,18 @@ public class InputHandler : MonoBehaviour {
         NewBettingEvent = GetComponent<Betting>();
         ASelection = new List<GameObject>();
 
+        Vector3 lastButtonPosition = NewBettingEvent.CurrentPage.transform.position
+                                     + new Vector3(0f, -30f, 0f);
+
         foreach (Sport aSport in NewBettingEvent.AvailableSports)
         {
             GameObject newButton = Instantiate(SportButton) as GameObject;
             newButton.transform.SetParent(NewBettingEvent.CurrentPage.transform, false);
             ASelection.Add(newButton);
-            newButton.transform.localPosition = new Vector3(0f, newButton.transform.localPosition.y
-                                                                - 20f, 0f);
+            newButton.transform.localPosition = new Vector3(0f, lastButtonPosition.y - 30f, 0f);
+            newButton.transform.GetChild(0).GetComponent<Text>().text = aSport.Name;
             newButton.SetActive(true);
+            lastButtonPosition = newButton.transform.localPosition;
         }
 
 

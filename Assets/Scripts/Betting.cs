@@ -24,6 +24,7 @@ public class Betting : MonoBehaviour
         AvailableSports = new List<Sport>();
         AvailableSports.Add(new Sport("Soccer"));
         AvailableSports.Add(new Sport("Basketball"));
+        AvailableSports.Add(new Sport("Boxing"));
         AvailableSports.Add(new Sport("Football"));
     }
 
