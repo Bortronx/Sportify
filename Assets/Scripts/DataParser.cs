@@ -12,19 +12,19 @@ public class DataParser : MonoBehaviour
     void Start ()
     {
 
-        int num = 0;
+        int index = 0;
 
         string line;
-	    while ((line = QuestionFile.text.Split("\n"[0])[0]) != null)
+	    while ((line = QuestionFile.text.Split("\n"[0])[index]) != null)
 	    {
 	        string[] items = line.Split('\t');
-	        int myInteger = int.Parse(items[1]);   // Here's your integer.
+	        //int myInteger = int.Parse(items[1]);   // Here's your integer.
 
 	        // Now let's find the path.
 	        string path = null;
 	        foreach (string item in items)
 	        {
-	            if (item.StartsWith("item\\") && item.EndsWith(".ddj"))
+	            if (item.StartsWith("Te") && item.EndsWith(".ddj"))
 	                path = item;
 	        }
 
@@ -32,7 +32,7 @@ public class DataParser : MonoBehaviour
 	        // for the current line. We can then store those values or print them,
 	        // or anything else we like.
 
-	        num++;
+	        index++;
 	    }
 
     }
