@@ -18,14 +18,3 @@ A: PlayerA, PlayerB, PlayerC, PlayerD, PlayerE
 
 
 Q: PlayerA score prediction?   ------------------works like powerball
-
-
-
-Varibles:
-
-PlayerA, PlayerB, PlayerC, PlayerD, PlayerE,
-PlayerB
-PlayerA 
-Teamx 
-Teamx, Teamy
-PlayerA

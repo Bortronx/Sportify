@@ -1,31 +1,37 @@
-Q: Teamx or Teamy win?
-A: Teamx
+Q Teamx or Teamy win
+A Teamx
+A Teamy
 
-Q: Records of Teamx next week
-A: Ranking ___ in the league
+Q Records of Teamx next week
+A Win
+A Lose
 
-Q: Changes of ranking.
-A:  Down/Up___
+Q Changes of ranking.
+A  Down
+A  Up
 
-Q: PlayerA getting fouled out
-A: Yes/ No
+Q PlayerA getting fouled out
+A Yes
+A No
 
-Q: PlayerB returning from injury
-A: Yes/No
+Q PlayerB returning from injury
+A Yes
+A No
 
-Q: Starting lineup
-A: PlayerA, PlayerB, PlayerC, PlayerD, PlayerE
-
-
-Q: PlayerA score prediction?   ------------------works like powerball
-
+Q Game MVP
+A PlayerA
+A PlayerB
 
 
-Varibles:
+Q PlayerA score prediction
+A 1
+A 2-4
+A More than 4
 
-PlayerA, PlayerB, PlayerC, PlayerD, PlayerE,
-PlayerB
-PlayerA 
-Teamx 
-Teamx, Teamy
-PlayerA
+	
+Varibles
+PlayerB,
+PlayerA, 
+Teamx, 
+Teamx,
+Teamy

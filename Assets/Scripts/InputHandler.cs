@@ -3,22 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+[RequireComponent(typeof(Betting))]
 public class InputHandler : MonoBehaviour {
 
-    //Make sure to attach these Buttons in the Inspector
-    public List<Button> ASelection;
+    //Button prefabs.
+    public GameObject SportButton;
+    public GameObject PromptButton;
+    public GameObject AnswerButton;
+
+    //Selection Buttons
+    public List<GameObject> ASelection;
 
     public Betting NewBettingEvent;
 
     // Use this for initialization
     void Start () {
 
-        ASelection = new List<Button>();
+        NewBettingEvent = GetComponent<Betting>();
+        ASelection = new List<GameObject>();
+
+        foreach (Sport aSport in NewBettingEvent.AvailableSports)
+        {
+            GameObject newButton = Instantiate(SportButton) as GameObject;
+            newButton.transform.SetParent(NewBettingEvent.CurrentPage.transform, false);
+            ASelection.Add(newButton);
+            newButton.transform.localPosition = new Vector3(0f, newButton.transform.localPosition.y
+                                                                - 20f, 0f);
+            newButton.SetActive(true);
+        }
+
+
         //Calls the TaskOnClick/SelectParameter/ButtonClicked method when you click the Button
         for (int i = 0; i < ASelection.Count; i++)
         {
-            ASelection[i].onClick.AddListener(delegate { SelectParameter(NewBettingEvent.AvailableSports[i].Name); });
+            ASelection[i].GetComponent<Button>().onClick.AddListener(delegate { SelectParameter(NewBettingEvent.AvailableSports[i].Name); });
         }
 
         //.onClick.AddListener(() => ButtonClicked(42));
