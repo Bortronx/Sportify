@@ -8,14 +8,4 @@ public class Sport : MonoBehaviour
     public String Name { get; private set; }
 
 
-    // Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 }
